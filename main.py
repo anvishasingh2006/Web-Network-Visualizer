@@ -123,11 +123,11 @@ async def generate_interactive_graph(url: str, max_pages: int = 25):
         label_text = node["id"].replace("https://", "").replace("http://", "")
         
         title_hover = (
-            f"<b>URL:</b> {node['id']}<br>"
-            f"<b>PageRank:</b> {node['pagerank']}<br>"
-            f"<b>In-Degree:</b> {node['in_degree']}<br>"
-            f"<b>Out-Degree:</b> {node['out_degree']}"
-        )
+    f"URL: {node['id']}\n"
+    f"PageRank: {node['pagerank']:.4f}\n"
+    f"In-Degree: {node['in_degree']}\n"
+    f"Out-Degree: {node['out_degree']}"
+)
 
         net.add_node(
             node["id"],
